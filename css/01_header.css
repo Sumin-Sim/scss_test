@@ -1,0 +1,38 @@
+header {
+    width: 100%;
+    padding: 32px 0;
+}
+header>div {
+    width: 1168px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; align-items: center;
+}
+header>div>h1>a {
+    font: 700 32px/1 'Agdasima', sans-serif; color: #81d29e;
+}
+header>div>nav>ul {
+    display: flex;
+}
+header>div>nav>ul>li {
+    margin-left: 24px;
+    position: relative;
+}
+header>div>nav>ul>li:first-child {
+    margin-left: 0;
+}
+header>div>nav>ul>li>a {
+    font: 400 12px/1  'Pretendard-Regular', sans-serif; color: #292929;
+}
+header>div>nav>ul>li>span {
+    width: calc(100% + 16px); height: 1px;
+    position: absolute;
+    top: -40px; left: -8px;
+    background-color: transparent;
+}
+header>div>nav>ul>li:hover>a {
+    color: #81d29e;
+}
+header>div>nav>ul>li:hover>span {
+    background-color: #81d29e;
+}

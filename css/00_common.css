@@ -1,0 +1,44 @@
+/*
+content width: 1168px;
+font-size: 12px / 16px / 20px / 24px / 32px / 48px / 64px;
+
+font > title
+font: 700 32px/1 'Agdasima', sans-serif; color: #81d29e;
+font > nav
+font: 400 12px/1  'Pretendard-Regular', sans-serif; color: #292929;
+font > important
+font: 700 32px/1 'Agdasima', sans-serif; color: #81d29e / #292929;
+font: 400 32px/1 'Agdasima', sans-serif; color: #292929 / #fff;
+font > regular
+font: 900 16px/1.5  'Pretendard-Black', sans-serif; color: #81d29e;
+font: 400 16px/1.5  'Pretendard-Regular', sans-serif; color: #292929 / #fff / #ccc;
+font > button
+font: 400 16px/1 'Pretendard-Regular', sans-serif; color: #292929;
+
+color: #292929 / #81d29e / #fff / #ccc / #999;
+
+button >
+width: 160px; height: 48px / 32px;
+margin-right: 16px;
+display: flex;
+justify-content: center; align-items: center;
+background-color: #81d29e;
+border: none;
+border-radius: 4px;
+font: 400 16px/1 'Pretendard-Regular', sans-serif; color: #292929;
+cursor: pointer;
+button> p 
+margin-right: 8px;
+
+article >
+width: 100%;
+padding: 80px 0;
+*/
+
+.hide {
+    width: 0; height: 0;
+    position: absolute;
+    visibility: none;
+    font-size: 0;
+    line-height: 0;
+}

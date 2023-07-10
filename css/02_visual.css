@@ -1,0 +1,54 @@
+article#visual {
+    width: 100%;
+    padding: 80px 0;
+    background-color: #292929;
+}
+article#visual>div {
+    width: 1168px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; align-items: center;
+}
+article#visual>div>div {
+    width: 100%;
+}
+article#visual>div>div>h3 {
+    margin-bottom: 16px;
+    font: 400 64px/1 'Agdasima', sans-serif; color: #fff;
+}
+article#visual>div>div>h3>b {
+    font: 700 64px/1 'Agdasima', sans-serif; color: #81d29e;
+}
+article#visual>div>div>p {
+    margin-bottom: 48px;
+    font: 400 16px/1.5  'Pretendard-Regular', sans-serif; color: #fff;
+}
+article#visual>div>div>p>b {
+    font: 900 16px/1.5  'Pretendard-Black', sans-serif; color: #81d29e;
+}
+article#visual>div>div>div {
+    display: flex;
+    justify-content: start;
+}
+article#visual>div>div>div>button {
+    width: 160px; height: 48px;
+    margin-right: 16px;
+    display: flex;
+    justify-content: center; align-items: center;
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    font: 400 16px/1 'Pretendard-Regular', sans-serif; color: #292929;
+    cursor: pointer;
+}
+article#visual>div>div>div>button:last-child {
+    margin-right: 0;
+    background-color: #81d29e;
+}
+article#visual>div>div>div>button>p {
+    margin-right: 8px;
+}
+article#visual>div>div>div>button:hover {
+    background-color: #292929;
+    color: #fff;
+}
