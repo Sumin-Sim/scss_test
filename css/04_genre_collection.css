@@ -37,9 +37,11 @@ article#genre>section#genre01>div.booklist {
     justify-content: space-between;
 }
 article#genre>section#genre01>div.booklist>dl {
+    width: 256px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 article#genre>section#genre01>div.booklist>dl>dt {
     margin-bottom: 4px;
@@ -48,8 +50,6 @@ article#genre>section#genre01>div.booklist>dl>dt {
 }
 article#genre>section#genre01>div.booklist>dl>dd:nth-of-type(1) {
     width: 256px; height: 320px;
-    box-sizing: border-box;
-    border: 1px #ccc solid;
     margin-bottom: 16px;
     order: 0;
 }
@@ -115,6 +115,10 @@ article#genre>section#genre02>div>div:nth-of-type(1) {
     display: flex;
     flex-direction: column;
 }
+article#genre>section#genre02>div>div:nth-of-type(1)>p:nth-of-type(1) {
+    margin-bottom: 16px;
+    font: 400 12px/1.5  'Pretendard-Regular', sans-serif; color: #ccc;
+}
 article#genre>section#genre02>div>div:nth-of-type(1)>h4 {
     margin-bottom: 8px;
     font: 900 32px/1  'Pretendard-Black', sans-serif; color: #fff;
@@ -128,10 +132,6 @@ article#genre>section#genre02>div>div:nth-of-type(1)>p {
 }
 article#genre>section#genre02>div>div:nth-of-type(1)>p>b {
     color: #81d29e;
-}
-article#genre>section#genre02>div>div:nth-of-type(1)>div>p {
-    margin-bottom: 16px;
-    font: 400 12px/1.5  'Pretendard-Regular', sans-serif; color: #ccc;
 }
 article#genre>section#genre02>div>div:nth-of-type(1)>button {
     width: 160px; height: 48px;
@@ -156,20 +156,21 @@ article#genre>section#genre02>div>div:nth-of-type(2) {
     top: 256px; right: 16px;
 }
 article#genre>section#genre02>div>div:nth-of-type(2)>span:nth-child(1) {
-    width: 160px;
+    width: 168px;
     padding: 4px 8px;
     display: block;
+    box-sizing: border-box;
     background-color: #fff;
-    font: 900 24px/1  'Pretendard-Black', sans-serif; color: #292929;
-    text-align: center;
+    font: 900 16px/1  'Pretendard-Black', sans-serif; color: #292929;
+    text-align: left;
 }
 article#genre>section#genre02>div>div:nth-of-type(2)>span:nth-child(2) {
-    width: 128px;
+    width: 88px;
     padding: 4px 8px;
     display: block;
     background-color: #81d29e;
-    font: 400 16px/1  'Pretendard-Regular', sans-serif; color: #292929;
-    text-align: center;
+    font: 400 12px/1  'Pretendard-Regular', sans-serif; color: #292929;
+    text-align: left;
 }
 
 article#genre>section#genre03 {
@@ -208,9 +209,11 @@ article#genre>section#genre03>div.booklist {
     justify-content: space-between;
 }
 article#genre>section#genre03>div.booklist>dl {
+    width: 256px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 article#genre>section#genre03>div.booklist>dl>dt {
     margin-bottom: 4px;
@@ -219,8 +222,6 @@ article#genre>section#genre03>div.booklist>dl>dt {
 }
 article#genre>section#genre03>div.booklist>dl>dd:nth-of-type(1) {
     width: 256px; height: 320px;
-    box-sizing: border-box;
-    border: 1px #ccc solid;
     margin-bottom: 16px;
     order: 0;
 }

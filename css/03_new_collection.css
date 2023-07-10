@@ -33,9 +33,11 @@ article#new>section#new01>div.booklist {
     justify-content: space-between;
 }
 article#new>section#new01>div.booklist>dl {
+    width: 256px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 article#new>section#new01>div.booklist>dl>dt {
     margin-bottom: 4px;
@@ -44,8 +46,6 @@ article#new>section#new01>div.booklist>dl>dt {
 }
 article#new>section#new01>div.booklist>dl>dd:nth-of-type(1) {
     width: 256px; height: 320px;
-    box-sizing: border-box;
-    border: 1px #ccc solid;
     margin-bottom: 16px;
     order: 0;
 }
