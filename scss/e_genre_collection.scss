@@ -32,7 +32,7 @@ article#genre {
                 };
                 &:hover {
                     a {
-                        @include font_bold($color: $green);
+                        color: $green;
                     };
                 };
             };
