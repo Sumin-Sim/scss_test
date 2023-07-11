@@ -62,9 +62,12 @@
         width: $size * 16;
         @include flex($direction: column);
         text-align: center;
+        cursor: pointer;
         dt {
             margin-bottom: ($size / 4);
+            overflow: hidden;
             @include font_bold;
+            white-space: nowrap; text-overflow: ellipsis;
             order: 1;
         };
         dd {
