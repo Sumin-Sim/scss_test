@@ -1,10 +1,10 @@
 @use './variable' as *;
 @use './mixin' as *;
 
-@use './00_common.scss';
-@use './01_header.scss';
-@use './02_visual.scss';
-@use './03_new_collection.scss';
-@use './04_genre_collection.scss';
-@use './05_idea.scss';
-@use './06_footer.scss';
+@use './a_common.scss';
+@use './b_header.scss';
+@use './c_visual.scss';
+@use './d_new_collection.scss';
+@use './e_genre_collection.scss';
+@use './f_idea.scss';
+@use './g_footer.scss';

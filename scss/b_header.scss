@@ -1,0 +1,46 @@
+@use './variable' as *;
+@use './mixin' as *;
+
+header {
+    width: $sizeF; height: $size64;
+    @include flex;
+    div {
+        width: $sizeC;
+        @include margin;
+        @include flex;
+        h1 {
+            a {
+                @include font_important($weight: 700, $fontsize: $size32, $color: $green);
+            };
+        };
+    };
+}
+nav {
+    ul {
+        @include flex;
+        li {
+            height: $size;
+            margin-left: $size24;
+            @include flex;
+            position: relative;
+            &:first-child {
+                margin-left: 0;
+            };
+            a {
+                @include font_basic($fontsize: $size12);
+            };
+            span {
+                width: calc($sizeF + $size24); height: $size / 8;
+                @include positionTL($top: $size24 * -1, $left: $size12 * -1);
+            };
+            &:hover {
+                a {
+                    color: $green;
+                };
+                span {
+                    background-color: $green;
+                };
+            };
+        };
+    };
+}

@@ -1,0 +1,36 @@
+@use './variable' as *;
+@use './mixin' as *;
+
+article#idea {
+    @include article;
+    background-color: $green;
+    > div {
+        width: $sizeC;
+        @include margin;
+        h3 {
+            margin-bottom: $size32;
+            @include font_bold($fontsize: $size32);
+            b {
+                color: $white;
+            };
+        };
+        div {
+            @include flex($alignI: space-between);
+            img {
+                width: $size * 12.5; height: $size * 12.5;
+                margin-right: $size48;
+                box-sizing: border-box;
+                border: ($size / 2) $white solid;
+                border-radius: 50%;
+            };
+            p {
+                @include flex($direction: column, $alignI: flex-start);
+                @include font_basic($lineH: 1.5);
+                text-align: justify;
+                span {
+                    display: block;
+                };
+            };
+        };
+    };
+}

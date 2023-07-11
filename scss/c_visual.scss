@@ -1,0 +1,42 @@
+@use './variable' as *;
+@use './mixin' as *;
+
+article#visual {
+    @include article;
+    background-color: $black;
+    > div {
+        width: $sizeC;
+        @include margin;
+        @include flex;
+        > div {
+            width: $sizeF;
+            h3 {
+                margin-bottom: $size;
+                @include font_important($fontsize: $size64, $color: $white);
+                b {
+                    @include font_important($weight: 700, $fontsize: $size64, $color: $green);
+                };
+            };
+            > p {
+                margin-bottom: $size48;
+                @include font_basic($lineH: 1.5, $color: $white);
+                b {
+                    @include font_bold($lineH: 1.5, $color: $green);
+                };
+            };
+            div {
+                @include flex($justifyC: start);
+                button {
+                    @include button($height: $size * 3);
+                    &:first-child {
+                        margin-right: $size;
+                        background-color: $white;
+                        &:hover {
+                            background-color: $black;
+                        };
+                    };
+                };
+            };
+        };
+    };
+}

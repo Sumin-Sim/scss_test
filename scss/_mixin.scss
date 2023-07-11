@@ -1,0 +1,103 @@
+@use './variable' as *;
+
+@mixin flex($wrap: nowrap, $direction: row, $justifyC: space-between, $alignI: center) {
+    display: flex;
+    flex-wrap: $wrap; flex-direction: $direction;
+    justify-content: $justifyC; align-items: $alignI;
+}
+@mixin margin($top: 0, $bottom: 0) {
+    margin: $top auto $bottom;
+}
+@mixin positionTL($top: 0, $left: 0) {
+    position: absolute;
+    top: $top; left: $left;
+}
+@mixin positionBR($pos: absolute, $bottom: 0, $right: 0) {
+    position: $pos;
+    bottom: $bottom; right: $right;
+}
+@mixin font_important($weight: 400, $fontsize: $size, $lineH: 1, $color: $black) {
+    font: $weight #{$fontsize}/#{$lineH} 'Agdasima', sans-serif; color: $color;
+}
+@mixin font_basic($fontsize: $size, $lineH: 1, $color: $black) {
+    font: 400 #{$fontsize}/#{$lineH}  'Pretendard-Regular', sans-serif; color: $color;
+}
+@mixin font_bold($fontsize: $size, $lineH: 1, $color: $black) {
+    font: 900 #{$fontsize}/#{$lineH}  'Pretendard-Black', sans-serif; color: $color;
+}
+
+
+
+
+@mixin article($bottom: $size * 5) {
+    width: $sizeF;
+    padding: ($size * 5) 0 $bottom;
+}
+@mixin button($height: $size32, $bg_color: $green) {
+    width: $size * 10; height: $height;
+    @include flex($justifyC: center);
+    background-color: $bg_color;
+    border: none;
+    border-radius: ($size / 4);
+    @include font_bold;
+    cursor: pointer;
+    p {
+        margin-right: ($size / 2);
+    };
+    &:hover {
+        background-color: $black;
+        color: $white;
+    }
+}
+@mixin bar($marginb: ($size / 2)) {
+    width: $size * 20; height: ($size / 8);
+    margin-bottom: $marginb;
+    position: relative;
+    background-color: $light;
+
+}
+@mixin booklist {
+    @include flex;
+    dl {
+        width: $size * 16;
+        @include flex($direction: column);
+        text-align: center;
+        dt {
+            margin-bottom: ($size / 4);
+            @include font_bold;
+            order: 1;
+        };
+        dd {
+            &:nth-of-type(1) {
+                width: $sizeF; height: $size32 * 10;
+                margin-bottom: $size;
+            };
+            &:nth-of-type(2) {
+                margin-bottom: $size;
+                @include font_basic($color: $dark);
+                order: 1;
+            };
+            &:nth-of-type(3) {
+                margin-bottom: $size24;
+                order: 1;
+                ins {
+                    margin-right: ($size / 4);
+                    @include font_bold($color: $green);
+                    text-decoration: none;
+                };
+                del {
+                    @include font_basic($fontsize: $size12, $color: $light);
+                };
+                span {
+                    @include font_basic($fontsize: $size12);
+                };
+            };
+            &:nth-of-type(4) {
+                order: 1;
+                button {
+                    @include button;
+                }
+            };
+        };
+    };
+}

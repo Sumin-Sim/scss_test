@@ -1,0 +1,25 @@
+@use './variable' as *;
+@use './mixin' as *;
+
+aside {
+    width: $size48; height: $size48;
+    @include flex($justifyC: center);
+    @include positionBR(fixed, $size32, $size32);
+    border: ($size / 8) $green solid;
+    border-radius: ($size / 2);
+    background-color: rgba($color: $white, $alpha: 0.5);
+    p {
+        font-size: $size24;
+        color: $green;
+    };
+}
+footer {
+    width: $sizeF;
+    padding: $size32 0;
+    background-color: $black;
+    small {
+        display: block;
+        @include font_basic($color: $light);
+        text-align: center;
+    };
+}

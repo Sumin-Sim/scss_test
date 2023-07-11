@@ -1,0 +1,107 @@
+@use './variable' as *;
+@use './mixin' as *;
+
+article#genre {
+    @include article;
+    section#genre01 {
+        @include margin($bottom: $size * 5);
+    };
+    section#genre03 {
+        @include margin($top: $size * 5);
+    };
+    section#genre01, section#genre03 {
+        width: $sizeC;
+        h4 {
+            margin-bottom: ($size / 2);
+            @include font_bold($fontsize: $size32);
+        };
+        div.bar {
+            @include bar;
+        };
+        > p {
+            margin-bottom: $size32;
+            @include font_basic($color: $green);
+        };
+        ul {
+            margin-bottom: $size32;
+            @include flex($justifyC: start);
+            li {
+                margin-right: $size; padding: ($size / 2) $size;
+                a {
+                    @include font_basic;
+                };
+                &:hover {
+                    a {
+                        @include font_bold($color: $green);
+                    };
+                };
+            };
+        };
+        div.booklist {
+            @include booklist;
+        };
+    };
+    section#genre02 {
+        @include article;
+        background-color: $black;
+        > div {
+            width: $sizeC;
+            @include margin;
+            @include flex;
+            position: relative;
+            img {
+                &:nth-of-type(1) {
+                    margin-right: $size64;
+                };
+            };
+            > div{
+                &:nth-of-type(1) {
+                    width: $sizeF;
+                    margin-right: $size64;
+                    @include flex($direction: column, $alignI: start);
+                    > p {
+                        &:nth-of-type(1) {
+                            margin-bottom: $size;
+                            @include font_basic($size12, 1.5, $light);
+                        };
+                        &:nth-of-type(2) {
+                            margin-bottom: $size32;
+                            @include font_basic($color: $white);
+                            b {
+                                color: $green;
+                            };
+                        };
+                    };
+                    h4 {
+                        margin-bottom: ($size / 2);
+                        @include font_bold($fontsize: $size32, $color: $white);
+                        b {
+                            color: $green;
+                        };
+                    };
+                    button {
+                        @include button($size48, $white);
+                    };
+                };
+                &:nth-of-type(2) {
+                    @include positionBR($bottom: $size, $right: $size);
+                    @include flex($direction: column, $alignI: start);
+                    span {
+                        &:nth-child(1) {
+                            padding: ($size / 4) ($size / 2);
+                            display: inline-block;
+                            background-color: $white;
+                            @include font_bold($fontsize: $size24);
+                        };
+                        &:nth-child(2) {
+                            padding: ($size / 4) ($size / 2);
+                            display: inline-block;
+                            background-color: $green;
+                            @include font_basic;
+                        };
+                    };
+                };
+            };
+        };
+    };
+}

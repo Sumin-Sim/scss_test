@@ -1,0 +1,19 @@
+// size
+$size: 16px;
+$sizeF: 100%;
+
+$size-content: $size * 73 /* 1168px */;
+    $sizeC: $size-content;
+
+$size12: $size * 0.75;
+$size24: $size * 1.5;
+$size32: $size * 2;
+$size48: $size * 3;
+$size64: $size * 4;
+
+// color
+$black: #292929;
+$dark: #888;
+$light: #ddd;
+$white: #fff;
+$green: #81d29e;
