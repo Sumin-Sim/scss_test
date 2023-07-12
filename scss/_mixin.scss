@@ -87,11 +87,11 @@
                 margin-bottom: $size24;
                 order: 1;
                 ins {
-                    margin-right: ($size / 4);
                     @include font_bold($color: $green);
                     text-decoration: none;
                 };
                 del {
+                    margin-left: ($size / 4);
                     @include font_basic($fontsize: $size12, $color: $light);
                 };
                 span {
