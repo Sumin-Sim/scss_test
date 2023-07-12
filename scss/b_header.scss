@@ -19,7 +19,7 @@ nav {
     ul {
         @include flex;
         li {
-            height: $size;
+            height: $size64;
             margin-left: $size24;
             @include flex;
             position: relative;
@@ -28,14 +28,18 @@ nav {
             };
             a {
                 @include font_basic($fontsize: $size12);
+                z-index: 100;
+                &.selected {
+                    color: $green;
+                };
             };
             span {
-                width: calc($sizeF + $size24); height: $size / 8;
-                @include positionTL($top: $size24 * -1, $left: $size12 * -1);
+                width: calc($sizeF + $size24); height: $size64;
+                @include positionTL($left: $size12 * -1);
             };
             &:hover {
                 a {
-                    color: $green;
+                    color: $white;
                 };
                 span {
                     background-color: $green;

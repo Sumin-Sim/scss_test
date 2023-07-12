@@ -27,13 +27,14 @@ article#genre {
             @include flex($justifyC: start);
             li {
                 margin-right: $size; padding: ($size / 2) $size;
-                a {
-                    @include font_basic;
-                };
+                @include font_basic;
+                cursor: pointer;
                 &:hover {
-                    a {
-                        color: $green;
-                    };
+                    color: $green;
+                };
+                &.selected {
+                    background-color: $green;
+                    color: $white;
                 };
             };
         };
