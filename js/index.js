@@ -4,6 +4,7 @@ $(function() {
     navCur();
     booklistR();
     booklistM();
+    topBtn();
 });
 
 // nav:hover animation
@@ -224,4 +225,11 @@ function booklistM() {
             bookinfo[index].list();
         });
     });
+}
+
+
+function topBtn() {
+    document.querySelector('aside').addEventListener('click',function() {
+        window.scrollTo({top: 0, behavior: "smooth"})
+    })
 }

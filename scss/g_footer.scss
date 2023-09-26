@@ -8,6 +8,9 @@ aside {
     border: ($size / 8) $green solid;
     border-radius: ($size / 2);
     background-color: rgba($color: $white, $alpha: 0.5);
+    &:hover {
+        cursor: pointer;
+    }
     p {
         font-size: $size24;
         color: $green;
